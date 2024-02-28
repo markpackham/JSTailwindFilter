@@ -88,6 +88,15 @@ const productElements = [];
 
 // Loop over products & create an element
 products.forEach((product) => {
+  const productElement = createProductElement(product);
+
+  productElements.push(product);
+
+  productsWrapper.appendChild(productElement);
+});
+
+// Create product element
+function createProductElement(product) {
   const productElement = document.createElement("div");
 
   productElement.className = "item space-y-2";
@@ -109,7 +118,5 @@ products.forEach((product) => {
   <strong>$${product.price.toLocaleString()}</strong>
   `;
 
-  productElements.push(product);
-
-  productsWrapper.appendChild(productElement);
-});
+  return productElement;
+}

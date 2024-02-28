@@ -130,10 +130,20 @@ function updateCart(e) {
 
   if (statusElement.classList.contains("added")) {
     // Remove from cart
+
+    statusElement.classList.remove("added");
+    // Update button text
+    statusElement.innerText = "Add To Cart";
+    // Remove original button color
+    statusElement.classList.remove("bg-red-600");
+    statusElement.classList.add("bg-gray-800");
   } else {
     // Add to cart
     statusElement.classList.add("added");
     // Update button text
-    statusElement.innerText = "Remove from cart";
+    statusElement.innerText = "Remove From Cart";
+    // Remove original button color
+    statusElement.classList.remove("bg-gray-800");
+    statusElement.classList.add("bg-red-600");
   }
 }

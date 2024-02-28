@@ -118,5 +118,13 @@ function createProductElement(product) {
   <strong>$${product.price.toLocaleString()}</strong>
   `;
 
+  // Add EventListener
+  productElement.querySelector(".status").addEventListener("click", updateCart);
+
   return productElement;
+}
+
+// Add or remove item from cart
+function updateCart(e) {
+  const statusElement = e.target;
 }

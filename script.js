@@ -79,6 +79,7 @@ const checkboxes = document.querySelectorAll(".check");
 const filtersContainer = document.getElementById("filters-container");
 const searchInput = document.getElementById("search");
 const cartCount = document.getElementById("cart-count");
+const cartButton = document.getElementById("cart-button");
 
 // Init cart item count
 let cartItemCount = 0;

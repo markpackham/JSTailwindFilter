@@ -137,6 +137,9 @@ function updateCart(e) {
     // Remove original button color
     statusElement.classList.remove("bg-red-600");
     statusElement.classList.add("bg-gray-800");
+
+    // Reduce cart item number
+    cartItemCount--;
   } else {
     // Add to cart
     statusElement.classList.add("added");
@@ -145,5 +148,10 @@ function updateCart(e) {
     // Remove original button color
     statusElement.classList.remove("bg-gray-800");
     statusElement.classList.add("bg-red-600");
+
+    cartItemCount++;
   }
+
+  // Update cart item count
+  cartCount.innerText = cartItemCount.toString();
 }

@@ -161,7 +161,6 @@ function updateCart(e) {
 }
 
 // Filter products by checkboxes and search input
-
 function filterProducts() {
   // Get search term
   const searchTerm = searchInput.value.trim().toLowerCase();
@@ -170,4 +169,21 @@ function filterProducts() {
   const checkedCategories = Array.from(checkboxes)
     .filter((check) => check.checked)
     .map((check) => check.id);
+
+  // Loop over products & checked for matches
+  productElements.forEach((productElement, index) => {
+    const product = products[index];
+
+    // Check to see if product matches search or checked category
+
+    // Search Term check
+    const matchesSearchTerm = product.name
+      .toLocaleLowerCase()
+      .includes(searchTerm);
+  });
+
+  // We want to show everything if nothing is checked thus length equal to 0
+  const isInCheckedCategory =
+    checkedCategories.length === 0 ||
+    checkedCategories.includes(product.category);
 }

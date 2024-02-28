@@ -8,10 +8,17 @@
   </head>
   <body class="bg-gray-800 text-white">
     <nav class="bg-gray-900 p-4 mb-6">
-      <div class="container max-w-6xl mx-auto flex flex-col sm:flex-row gap-8 items-center">      
+      <div
+        class="container max-w-6xl mx-auto flex flex-col sm:flex-row gap-8 items-center"
+      >
         <!-- Search area -->
         <div class="relative w-full">
-          <input type="text" id="search" class="bg-gray-700 rounded-full p-2 pl-10 focus:w-full" placeholder="Search products...">
+          <input
+            type="text"
+            id="search"
+            class="bg-gray-700 rounded-full p-2 pl-10 focus:w-full"
+            placeholder="Search products..."
+          />
 
           <svg
             class="absolute left-2 top-1/2 -translate-y-1/2"
@@ -51,7 +58,10 @@
             />
             <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
           </svg>
-          <small id="cart-count" class="bg-red-500 rounded-full text-xs text-white w-4 h-4 absolute -top-2 -right-2">
+          <small
+            id="cart-count"
+            class="bg-red-500 rounded-full text-xs text-white w-4 h-4 absolute -top-2 -right-2"
+          >
             0
           </small>
         </div>
@@ -83,42 +93,11 @@
       </div>
 
       <!-- Products wrapper -->
-      <div id="products-wrapper"
-        class="w-full max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-6 place-content-center p-4">
-        <div class="item space-y-2">
-          <!-- With group class we can use group-hover in the button to make the button visible when image hovered over -->
-          <div class="bg-gray-100 flex justify-center relative overflow-hidden group cursor-pointer border rounded-xl">
-            <img class="w-full h-full object-cover" src="/images/playstation_5.png" alt="ps5">
-            <button class="status bg-black text-white absolute bottom-0 left-0 right-0 text-center py-2 translate-y-full transition group-hover:translate-y-0">
-              Add To Cart
-            </button>
-          </div>
-          <p class="text-xl">Playstation 5</p>
-          <strong>$399</strong>
-        </div>
-
-        <div class="item space-y-2">
-          <div class="bg-gray-100 flex justify-center relative overflow-hidden group cursor-pointer border rounded-xl">
-            <img class="w-full h-full object-cover" src="/images/samsung_galaxy.png" alt="Samsung Galaxy">
-            <button class="status bg-black text-white absolute bottom-0 left-0 right-0 text-center py-2 translate-y-full transition group-hover:translate-y-0">
-              Add To Cart
-            </button>
-          </div>
-          <p class="text-xl">Samsung Galaxy</p>
-          <strong>$399</strong>
-        </div>
-
-        <div class="item space-y-2">
-          <div class="bg-gray-100 flex justify-center relative overflow-hidden group cursor-pointer border rounded-xl">
-            <img class="w-full h-full object-cover" src="/images/sony_a7_camera.png" alt="Sony A7">
-            <button class="status bg-black text-white absolute bottom-0 left-0 right-0 text-center py-2 translate-y-full transition group-hover:translate-y-0">
-              Add To Cart
-            </button>
-          </div>
-          <p class="text-xl">Sony A7</p>
-          <strong>$399</strong>
-        </div>
-
+      <div
+        id="products-wrapper"
+        class="w-full max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-6 place-content-center p-4"
+      >
+        <!-- Products obtained from script.js file -->
       </div>
     </main>
 

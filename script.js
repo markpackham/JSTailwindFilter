@@ -92,15 +92,24 @@ products.forEach((product) => {
 
   productElement.className = "item space-y-2";
 
+  // With "group" class we can use "group-hover" in the button to make the button visible when image hovered over
   productElement.innerHTML = `
   <div class="bg-gray-100 flex justify-center relative overflow-hidden group cursor-pointer border rounded-xl">
-    <img class="w-full h-full object-cover" src="/images/sony_a7_camera.png" alt="Sony A7">
+
+    <img class="w-full h-full object-cover" src="${product.url}" alt="${
+    product.name
+  }">
     <button
       class="status bg-black text-white absolute bottom-0 left-0 right-0 text-center py-2 translate-y-full transition group-hover:translate-y-0">
       Add To Cart
     </button>
   </div>
-  <p class="text-xl">Sony A7</p>
-  <strong>$399</strong>
+  <p class="text-xl">${product.name}</p>
+  <!-- Use toLocalString() so comma added in thousands -->
+  <strong>$${product.price.toLocaleString()}</strong>
   `;
+
+  productElements.push(product);
+
+  productsWrapper.appendChild(productElement);
 });

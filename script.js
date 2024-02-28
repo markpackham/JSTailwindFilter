@@ -186,4 +186,12 @@ function filterProducts() {
   const isInCheckedCategory =
     checkedCategories.length === 0 ||
     checkedCategories.includes(product.category);
+
+  // Show or hide product based on matches
+  if (matchesSearchTerm && isInCheckedCategory) {
+    // Products hidden unless we chose to remove this
+    product.classList.remove("hidden");
+  } else {
+    product.classList.add("hidden");
+  }
 }

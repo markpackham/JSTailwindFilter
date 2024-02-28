@@ -127,4 +127,13 @@ function createProductElement(product) {
 // Add or remove item from cart
 function updateCart(e) {
   const statusElement = e.target;
+
+  if (statusElement.classList.contains("added")) {
+    // Remove from cart
+  } else {
+    // Add to cart
+    statusElement.classList.add("added");
+    // Update button text
+    statusElement.innerText = "Remove from cart";
+  }
 }

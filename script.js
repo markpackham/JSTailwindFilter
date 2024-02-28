@@ -180,18 +180,18 @@ function filterProducts() {
     const matchesSearchTerm = product.name
       .toLocaleLowerCase()
       .includes(searchTerm);
+
+    // We want to show everything if nothing is checked thus length equal to 0
+    const isInCheckedCategory =
+      checkedCategories.length === 0 ||
+      checkedCategories.includes(product.category);
+
+    // Show or hide product based on matches
+    if (matchesSearchTerm && isInCheckedCategory) {
+      // Products hidden unless we chose to remove this
+      productElement.classList.remove("hidden");
+    } else {
+      productElement.classList.add("hidden");
+    }
   });
-
-  // We want to show everything if nothing is checked thus length equal to 0
-  const isInCheckedCategory =
-    checkedCategories.length === 0 ||
-    checkedCategories.includes(product.category);
-
-  // Show or hide product based on matches
-  if (matchesSearchTerm && isInCheckedCategory) {
-    // Products hidden unless we chose to remove this
-    product.classList.remove("hidden");
-  } else {
-    product.classList.add("hidden");
-  }
 }

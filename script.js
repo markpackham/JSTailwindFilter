@@ -79,3 +79,28 @@ const checkboxes = document.querySelectorAll(".check");
 const filtersContainer = document.getElementById("filters-container");
 const searchInput = document.getElementById("search");
 const cartCount = document.getElementById("cart-count");
+
+// Init cart item count
+let cartItemCount = 0;
+
+// Init product element array
+const productElements = [];
+
+// Loop over products & create an element
+products.forEach((product) => {
+  const productElement = document.createElement("div");
+
+  productElement.className = "item space-y-2";
+
+  productElement.innerHTML = `
+  <div class="bg-gray-100 flex justify-center relative overflow-hidden group cursor-pointer border rounded-xl">
+    <img class="w-full h-full object-cover" src="/images/sony_a7_camera.png" alt="Sony A7">
+    <button
+      class="status bg-black text-white absolute bottom-0 left-0 right-0 text-center py-2 translate-y-full transition group-hover:translate-y-0">
+      Add To Cart
+    </button>
+  </div>
+  <p class="text-xl">Sony A7</p>
+  <strong>$399</strong>
+  `;
+});
